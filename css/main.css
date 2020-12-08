@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    background-color: rgb(47, 79, 79);
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .next {
+    float: left;
+}
+
+body.rtl .adding {
+    float: right;
+}
+
+.navbar {
+    background-color: rgb(240, 151, 18);
+    box-shadow: 0 0 15px black;
+    padding: 0.03px;
+    height: 15vh;
+    text-align: center;
+}
+
+.main-container {
+    display: block;
+    align-items: center;
+    background-image: url(/img/backGI.png);
+    height: 160vh;
+}
+
+.main-container h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Texturina', serif;
+    text-shadow: 4px -2px 2px #bffae891;
+}
+
+.main-container title {
+    font-family: sans-serif;
+}
+
+select {
+    margin-inline-start: 10vw;
+    border: groove;
+    background-color: rgba(168, 185, 185, 0.295);
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-top: -10vh;
+}
+
+.adding {
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    margin-inline-start: 10vw;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 2vh;
+    float: left;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    border-radius: 2px;
+}
+
+.book-details {
+    background-color: papayawhip;
+    padding: 15px;
+    box-shadow: 5px 0px 12px 1px #0000008a;
+    width: 99%;
+    margin: 33px;
+    margin-top: 0;
+}
+
+.book-details button {
+    background-color: coral;
+    color: white;
+    box-shadow: 0px 0px 2px 0px black;
+}
+
+img {
+    display: inline;
+    margin-right: 20px;
+    width: 8vw;
+    margin-bottom: 10px;
+}
+
+.rate {
+    background-color: rgb(224, 220, 217);
+    display: inline;
+    box-shadow: 0 0 4px black;
+}
+
+.rate button {
+    height: 2.5vh;
+    width: 3vw;
+    background-color: dimgray;
+    cursor: pointer;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.rate span {
+    margin: 10px;
+}
+
+.save-rate button {
+    display: inline;
+    margin-left: 10px;
+    background-color: rgba(73, 121, 105, 0.986);
+    padding: 5px;
+    box-shadow: 0px 0px 2px 0px black;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.inputs {
+    margin-bottom: 15px;
+    margin-inline-start: 10vw;
+}
+
+.inputs button {
+    height: 5.5vh;
+    background-color: seagreen;
+    color: seashell;
+    cursor: pointer;
+}
+
+input {
+    box-shadow: 0px 0px 1px 0px black;
+    padding: 10px;
+    margin-left: 0;
+    width: 20%;
+}
+
+table {
+    background-color: rgb(160, 224, 200);
+    width: 100%;
+    margin: 84px auto 0;
+    text-align: center;
+    box-shadow: 1px -1px 11px 0px black;
+}
+
+table thead {
+    background-color: rgb(44, 44, 44);
+    font-weight: bold;
+    color: silver;
+}
+
+.title,
+.price {
+    cursor: pointer;
+}
+
+table button {
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 0px black;
+}
+
+table td {
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.read-btn {
+    background-color: rgb(233, 184, 49);
+}
+
+.update-btn {
+    background-color: rgb(168, 120, 31);
+}
+
+.remove-btn {
+    background-color: rgb(100, 70, 6);
+}
+
+.picture {
+    display: inline;
+    width: 100vw;
+    opacity: 0.3;
+}
+
+.update {
+    margin-inline-start: 15vw;
+    margin-top: 8vh;
+    font-size: large;
+}
+
+.update h4 {
+    margin: 5px;
+    color: rgb(159, 212, 159);
+}
+
+.update button {
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: rgb(168, 120, 31);
+    box-shadow: 0 0 5px 0px black;
+    padding: 4px;
+}
+
+.save-price button {
+    background-color: darkseagreen;
+    font-weight: 600;
+}
+
+.next {
+    float: right;
+    margin-top: 20vh;
+    margin-bottom: 4vh;
+    width: 10vw;
+    height: 4vh;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 4px black;
+    margin-inline-end: 61px;
+}
+
+.next:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}

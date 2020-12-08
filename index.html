@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap');
+    </style>
+</head>
+
+<body onload="onInit()">
+    <div class="main-container">
+
+        <!-- nav-bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">
+                <h1 data-trans="title">Welcome to my bookshop</h1>
+                <select onchange="onSetLang(this.value)">
+                            <option value="en">English</option>
+                            <option value="he">עברית</option>
+                            <option value="es">Spanish</option>
+                        </select><span class="sr-only"></span></a>
+
+
+            <div class="adding" onclick="onAddBook()" data-trans="new">create new book</div>
+        </nav>
+
+        <div class="inputs" hidden>
+            <h4 data-trans="book-name">book-name</h4>
+            <input type="text" placeholder="Enter a name" name="name" data-trans="name-place" />
+            <h4 data-trans="book-price">book-price</h4>
+            <input type="text" placeholder="Enter a price" name="price" data-trans="price-place" />
+            <button onclick="onAddBook()" data-trans="save">Save</button>
+            <button onclick="onCloseInputs()" data-trans="done">Done</button>
+        </div>
+
+        <div class="update" hidden>
+            <h4 data-trans="new-price">The new price</h4>
+            <input type="text" placeholder="Enter the price" name="newPrice" data-trans="price-place-change" />
+            <div class="save-price"></div>
+            <button onclick="onCloseUpdate()" data-trans="done-change">Done</button>
+        </div>
+
+
+        <div class="books-container">
+            <table border="0">
+                <thead>
+                    <td data-trans="id">id</td>
+                    <td class="title" onclick="onSetSorting('name')" data-trans="table-title">🔗 Title</td>
+                    <td class="price" onclick="onSetSorting('price')" data-trans="table-price">🔗 price</td>
+                    <td data-trans="actions" colspan="3">Actions</td>
+                    <td data-trans="rate">Rate</td>
+                </thead>
+                <tbody></tbody>
+                <div class="book-details" hidden>
+                    <h5></h5>
+                    <h6></h6>
+                    <img src="img/1.jpg" />
+                    <div class="rate">
+                        <button onclick="onLess()">-</button>
+                        <span>0</span>
+                        <button onclick="onMore()">+</button>
+                    </div>
+                    <div class="save-rate"></div>
+                    <p></p>
+                    <button onclick="onCloseModal()" data-trans="close-modal">Close</button>
+                </div>
+
+            </table>
+        </div>
+
+        <button class="next" onclick="onNextPage()" data-trans="next-page">Next Page</button>
+    </div>
+    <script src="js/util-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>
